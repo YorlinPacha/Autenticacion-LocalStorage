@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "e50e52b6-3429-40aa-abfb-1e457ce392f1",
+		"name": "API Jercilla",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26396001"
+	},
+	"item": [
+		{
+			"name": "GET cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET cities{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities/BIO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						"BIO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"MNG\", \"name\":\"Managua\", \"temperature\": 38, \"rain_probability\": 0.94}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cities",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "NYC",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Nueva York",
+							"disabled": true
+						},
+						{
+							"key": "temperature",
+							"value": "8",
+							"disabled": true
+						},
+						{
+							"key": "rain_probability",
+							"value": "0.4",
+							"disabled": true
+						},
+						{
+							"key": "data",
+							"value": "{\"id\":\"NYC\", \"name\":\"New York\", \"temperature\": 8, \"rain_probability\": 0.4}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"temperature\": 20, \"rain_probability\": 0.14}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cities/MNG",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						"MNG"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "NYC",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "Nueva York",
+							"disabled": true
+						},
+						{
+							"key": "temperature",
+							"value": "8",
+							"disabled": true
+						},
+						{
+							"key": "rain_probability",
+							"value": "0.4",
+							"disabled": true
+						},
+						{
+							"key": "data",
+							"value": "{\"id\":\"NYC\", \"name\":\"New York\", \"temperature\": 8, \"rain_probability\": 0.4}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/cities/NYC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						"NYC"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT (update)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"MNG\",\r\n    \"name\": \"Managua\",\r\n    \"temperature\": 37,\r\n    \"rain_probability\": 0.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/cities/MNG",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cities",
+						"MNG"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
